@@ -2,8 +2,24 @@
 shadesock_config_base_dir="/Users/shichengyuan/repo/scm/shadesocks-ng/"
 shadesock_work_dir="/Users/shichengyuan/.ShadowsocksX-NG/"
 
-shadesock_config_dir_place="eleme-aliyun"
-# shadesock_config_dir_place="default"
+shadesock_config_dir_place="default"
+
+echo "paras: "$*
+if [ x$1 != x ]
+then
+	if [ $1 == "d" ]
+	then
+   		shadesock_config_dir_place="default"
+   	fi
+   	if [ $1 == "e" ]
+	then
+   		shadesock_config_dir_place="eleme-aliyun"
+   	fi
+   	echo $shadesock_config_dir_place
+else
+   echo "no argu"
+fi
+
 
 shadesock_config_dir=${shadesock_config_base_dir}${shadesock_config_dir_place}"/"
 
