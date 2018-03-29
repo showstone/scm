@@ -74,12 +74,10 @@ pwd
 ln  user-rule.txt $customer_rule_config
 
 # record status
-# if [ ! -f $run_status_file ];then
-# 	touch ${run_status_file}
-# fi
-echo ${run_status_file}
+if [ -f $run_status_file ];then
+	rm ${run_status_file}
+fi
 echo ${shadesock_config_dir_place} > ${run_status_file}
-# echo ${shadesock_config_dir_place} >! ${run_status_file}
 echo "switch env:"${shadesock_config_dir_place}
 
 
