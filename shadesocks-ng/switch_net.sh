@@ -3,7 +3,7 @@ shadesock_config_base_dir="/Users/shichengyuan/repo/scm/shadesocks-ng/"
 shadesock_work_dir="/Users/shichengyuan/.ShadowsocksX-NG/"
 
 shadesock_config_dir_place="eleme-aliyun"
-shadesock_config_dir="default"
+shadesock_config_dir_place="default"
 
 shadesock_config_dir=${shadesock_config_base_dir}${shadesock_config_dir_place}"/"
 
@@ -80,6 +80,6 @@ ln  user-rule.txt $customer_rule_config
 echo ${run_status_file}
 echo ${shadesock_config_dir_place} > ${run_status_file}
 # echo ${shadesock_config_dir_place} >! ${run_status_file}
-echo "switch env"
+echo "switch env:"${shadesock_config_dir_place}
 
 
