@@ -1,0 +1,2 @@
+# scm
+common software config
