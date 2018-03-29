@@ -1,5 +1,10 @@
 ! Put user rules line by line in this file.
 ! See https://adblockplus.org/en/filter-cheatsheet
-|| note.youdao.com
-eleme
 
+! eleme note
+||note.youdao.com
+||yinxiang.com
+
+! onenote
+live.com
+onenote.com
