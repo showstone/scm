@@ -99,7 +99,7 @@ echo "switch env:"${shadesock_config_dir_place}
 # kill shadesocks process
 ps axu | grep ShadowsocksX-NG | grep -v grep  | awk '{print $2}' | xargs kill -9
 
+slepp 3
 # start shadesocks
 /Applications/ShadowsocksX-NG.app/Contents/MacOS/ShadowsocksX-NG &
-sleep 1
 
