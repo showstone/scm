@@ -23,7 +23,7 @@ fi
 
 shadesock_config_dir=${shadesock_config_base_dir}${shadesock_config_dir_place}"/"
 
-shadesocks_default_user_rule_config="/Applications/ShadowsocksX-NG.app/Contents/Resources/user-rule.txt"
+shadesocks_default_config_dir="/Applications/ShadowsocksX-NG.app/Contents/Resources/"
 user_rule_config="user-rule.txt"
 run_status="run_status.dat"
 
@@ -72,7 +72,17 @@ if [ -d $shadesock_work_dir ]; then
 	rm -r $shadesock_work_dir
 fi
 
-# override global customer userrule file
+# override global rule file
+shadesocks_default_gfw_rule_config=${shadesocks_default_config_dir}"gfwlist.txt"
+if [ -f $shadesocks_default_gfw_rule_config ]; then
+	rm $shadesocks_default_gfw_rule_config
+fi
+echo "-----------------"
+echo $shadesocks_default_gfw_rule_config
+pwd
+ln gfwlist.txt $shadesocks_default_gfw_rule_config
+
+shadesocks_default_user_rule_config=${shadesocks_default_config_dir}"user-rule.txt"
 if [ -f $shadesocks_default_user_rule_config ]; then
 	rm $shadesocks_default_user_rule_config
 fi
